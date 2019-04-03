@@ -156,6 +156,7 @@
             </Spinner>
 
             <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_state_spinner"
                     android:src="@drawable/ic_down_arrow"
                     android:padding="8dp"
                     android:scaleType="centerCrop"
@@ -195,6 +196,7 @@
             </Spinner>
 
             <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_city_spinner"
                     android:src="@drawable/ic_down_arrow"
                     android:padding="8dp"
                     android:scaleType="centerCrop"
