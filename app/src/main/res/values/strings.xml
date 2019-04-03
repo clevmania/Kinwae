@@ -5,6 +5,14 @@
     <string name="up_navigation_icon">up navigation icon</string>
     <string name="open_new_account">Open New Account</string>
     <string name="Next">Next</string>
+    <string name="country_code">+234</string>
+    <string name="email">Email</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="type_branch_name">Type in branch name</string>
+    <string name="select_preferred_branch">Select Preferred Branch</string>
     <array name="account_steps">
         <item>Personal</item>
         <item>Contact</item>
