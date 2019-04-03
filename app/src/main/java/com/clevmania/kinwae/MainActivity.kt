@@ -3,6 +3,7 @@ package com.clevmania.kinwae
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import androidx.core.widget.NestedScrollView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_contact.*
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         populateStateSpinner()
         populateCitySpinner()
         handleUpArrow()
+        autoHideFloatingActionButton()
     }
 
     private fun handleUpArrow(){
@@ -36,5 +38,16 @@ class MainActivity : AppCompatActivity() {
         val cityAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, city)
         cityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         sp_city.adapter = cityAdapter
+    }
+
+    private fun autoHideFloatingActionButton(){
+        nsv_contact.setOnScrollChangeListener(
+            NestedScrollView.OnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
+                if (scrollY > oldScrollY) {
+                    floatingActionButton.hide()
+                } else {
+                    floatingActionButton.show()
+                }
+        })
     }
 }
