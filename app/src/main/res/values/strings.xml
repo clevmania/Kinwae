@@ -4,4 +4,15 @@
     <string name="back">Back</string>
     <string name="up_navigation_icon">up navigation icon</string>
     <string name="open_new_account">Open New Account</string>
+    <string name="Next">Next</string>
+    <array name="account_steps">
+        <item>Personal</item>
+        <item>Contact</item>
+        <item>Upload</item>
+    </array>
+    <string-array name="new_account_step">
+        <item>Personal</item>
+        <item>Contact</item>
+        <item>Upload</item>
+    </string-array>
 </resources>

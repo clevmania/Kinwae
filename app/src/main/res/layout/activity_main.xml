@@ -26,14 +26,14 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:contentDescription="@string/up_navigation_icon"
-                    android:src="@drawable/ic_back_arrow"/>
+                    android:src="@drawable/ic_back_arrow" android:id="@+id/iv_back_nav"/>
 
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:text="@string/back"/>
+                    android:text="@string/back" android:id="@+id/tv_back"/>
 
             <TextView
                     android:layout_width="0dp"
@@ -43,7 +43,7 @@
                     android:gravity="end"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/colorGray"
-                    android:text="@string/personal"/>
+                    android:text="@string/personal" android:id="@+id/tv_personal"/>
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -53,8 +53,52 @@
             android:layout_height="wrap_content"
             android:textStyle="bold" android:textColor="@color/colorBlack"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:id="@+id/textView" android:layout_marginTop="16dp"
+            android:id="@+id/tv_open_account_header" android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="24dp"/>
+    <com.shuhart.stepview.StepView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="16dp"
+            app:sv_selectedCircleColor="@color/colorPrimaryDark"
+            app:sv_selectedTextColor="@color/colorBlack"
+            app:sv_stepLineWidth="2dp" app:sv_steps="@array/new_account_step"
+            app:sv_stepPadding="4dp" app:sv_stepsNumber="3"
+            app:sv_nextTextColor="@color/colorGray"
+            app:sv_nextStepLineColor="@color/colorGray"
+            app:sv_doneCircleColor="@color/colorPrimaryDark"
+            app:sv_doneStepLineColor="@color/colorPrimaryDark"
+            app:sv_doneCircleRadius="12dp"
+            app:sv_doneStepMarkColor="@color/colorPrimary"
+            app:sv_doneTextColor="@color/colorBlack"
+            app:sv_selectedCircleRadius="16dp"
+            app:sv_selectedStepNumberColor="@color/colorPrimary"
+            app:sv_stepNumberTextSize="12sp"
+            app:sv_animationType="Line"
+            android:id="@+id/sv_account_opening" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_open_account_header"/>
+
+
+    <Button
+            android:text="@string/Next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.8"
+            android:background="@color/colorAccent" android:textColor="@color/colorYellow"
+            android:id="@+id/btn_next" android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            app:backgroundTint="@color/colorPrimary"
+            android:clickable="true" app:srcCompat="@drawable/comment"
+            android:id="@+id/floatingActionButton"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_next"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

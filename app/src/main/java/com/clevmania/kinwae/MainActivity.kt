@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
 //        setSupportActionBar(toolbar)
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 //        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+
+        sv_account_opening.go(1,true)
     }
 }
